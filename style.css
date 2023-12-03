@@ -56,13 +56,16 @@ h6 {
 p {
     margin: 1.5rem 0;
     color: var(--text-green);
-    font-size: 0.6875rem;
+    font-size: clamp(0.6875rem, 0.643rem + 0.188vw, 0.8125rem);
     letter-spacing: 0.210606rem;
     text-transform: uppercase;
 }
 
 h1 {
     color: var(--text-gray);
+    margin: 0 1.5rem;
+    text-align: center;
+    font-size: clamp(1.5rem, 1.412rem + 0.376vw, 1.75rem);
 }
 
 .divider-container {
@@ -81,6 +84,11 @@ h1 {
     background-color: var(--text-green);
 }
 
+.re-roll:hover {
+    cursor: pointer;
+    box-shadow: 0px 0px 40px 0px #53FFAA;
+}
+
 .attribution {
     margin-top: 5rem;
     font-size: 11px;
@@ -89,4 +97,16 @@ h1 {
 
 .attribution a {
     color: hsl(228, 45%, 44%);
+}
+
+@media (min-width: 555px) {
+    .divider-container>img {
+        content: url("./images/pattern-divider-desktop.svg");
+    }
+}
+
+@media (min-width:600px) {
+    .advice-card {
+        width: 33rem;
+    }
 }
